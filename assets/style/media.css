@@ -1,0 +1,111 @@
+  .media{
+   
+        background-image:url("../images/supermarket2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      
+      
+  }
+
+  main h3 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: var(--secondColor);
+  }
+
+  .pagehead h1{
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    opacity: 0.9;
+    font-size: 4em;
+    text-align: center;
+    color: var(--text);
+    /* padding-top: 5px; */
+  }
+
+  .pagehead{
+    margin-top: 6%;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+  .pagehead p{
+    font-family: 'Poppins', sans-serif;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   
+  }
+  .threecolumns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly ;
+    margin-bottom: 10%;
+  }
+  .threecolumns .date{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(77, 75, 75);
+    font-size: 1em;
+    margin-bottom: 1%;
+  }
+  .inner3col{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+  }
+  .colpic{
+    max-width: 100%;
+    height: auto; 
+    margin-bottom: 10%;
+    
+  }
+  .inner3col h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 2%;
+    font-size: 2em;
+  }
+  .threecolumns .colparagraph{
+    font-family:'Poppins', sans-serif; 
+    text-align: justify;
+    font-size: 1em;
+  }
+  .twocolumns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly ;
+    margin-bottom: 10%;
+  }
+  .inner2col{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  .twocolumns .date{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(77, 75, 75);
+    font-size: 1em;
+    margin-bottom: 1%;
+  }
+  .twocolumns .colparagraph{
+    font-family:'Poppins', sans-serif; 
+    text-align: justify;
+    font-size: 1.3em;
+  }
+  .inner2col h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 2%;
+    font-size: 2.5em;
+  }
+
+  

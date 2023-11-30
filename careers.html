@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="x, y, ,etc" />
+    <meta name="description" content="x, y, ,etc">
+    <meta name="author" content="x, y, ,etc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./Assets/style/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="assets/style/sass.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+    <title>Goodies Egypt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/84089d0d98.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo-img" src="assets/images/LogoWithDescription.png" alt="Goodies Logo">
+                    </a>
+                    <ul class="d-flex justify-content-between align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              About Us
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#story">Our story</a></li>
+                              <li><a class="dropdown-item" href="#mission">Mission</a></li>
+                              <li><a class="dropdown-item" href="#vision">Vision</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav-item"><a class="nav-link" href="#export">Export</a></li>
+                        <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">العربية</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="box row " style="margin-top: 135px;">
+        <div class="leftcolumn col-md-6">
+            <img src="./Assets/images/casual-life-3d-19 1.png" alt="avatar">
+        </div>
+        <div class="rightcolumn col-md-6">
+            <h3 class="text-center title">Careers</h3>
+            <p class="text-center">Join our team.</p>
+            <form class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control message">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Birth Date</label>
+                        <input type="date" class="form-control message">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control message">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Job</label>
+                        <select class="form-control message">
+                            <option value="">Sales</option>
+                            <option value="">Backoffice</option>
+                            <option value="">Quality</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">CV</label>
+                        <input type="file" class="form-control message">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Message</label>
+                        <textarea class="form-control" ></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <div class="buttons">
+                            <button class="blob-btn">
+                                Send Message
+                                <span class="blob-btn__inner">
+                                    <span class="blob-btn__blobs">
+                                        <span class="blob-btn__blob"></span>
+                                        <span class="blob-btn__blob"></span>
+                                        <span class="blob-btn__blob"></span>
+                                        <span class="blob-btn__blob"></span>
+                                    </span>
+                                </span>
+                            </button>
+                            <br />
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hide">
+                                <defs>
+                                    <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                                            result="goo"></feColorMatrix>
+                                        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="social-media">
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram fa-xl"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter fa-xl"></i></a>
+        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
+    </div>
+    <div class="footer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#export">Export</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="#">العربية</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2023 Goodies Egypt</p>
+</footer>
+
+<!-- ********************************** -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 3000,
+        once: true,
+    });
+</script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
