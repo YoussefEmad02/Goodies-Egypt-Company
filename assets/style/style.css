@@ -136,12 +136,16 @@ main button {
 .companies {
   width: 100%;
   padding-top: 75px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: var(--main);
 }
-
+.contcards{
+  margin-bottom: 50px;
+  
+}
 .companies .cards {
   display: flex;
   justify-content: center;
@@ -166,7 +170,11 @@ main button {
   color: var(--text);
   border: none;
 }
-
+.cardrow{
+  width: 100%;
+  margin: 0;
+  
+}
 .card:hover {
   box-shadow: var(--green) 0px 25px 50px -122px;
 }
@@ -442,14 +450,7 @@ main button {
 
 /* ***********fixedBg******* */
 /* *************Section 4 */
-.section4 {
-  /* text-align: center; */
-  height: 150vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 
 .section4 h3 {
   color: var(--green);
@@ -774,7 +775,7 @@ footer{
   align-items: center;
 }
 .social-media i{
-  width:50px;
+  width: 50px;
   cursor: pointer;
   color:var(--main)
 }

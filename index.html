@@ -83,11 +83,13 @@
         </div>
     </main>
 
-    <div class="container mt-5">
-        <div class="companies">
-            <h1 class="text-center">Our Brands</h1>
+    <div class="container-fluid mt-5 contcards" >
+        <div class="companies container">
             <div class="row">
-                <div class="card col-md-4 mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+                <h1 class="text-center">Our Brands</h1>
+            </div>
+            <div class="row cardrow">
+                <div class="card col-md-4 mb-4 border-0" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
                     <a href="#" class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -102,7 +104,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="card col-md-4 mb-4" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
+                <div class="card col-md-4 mb-4 border-0" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
                     <a href="" class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -117,7 +119,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="card col-md-4 mb-4" data-aos="fade-down" data-aos-duration="3000" data-aos-once="true">
+                <div class="card col-md-4 mb-4 border-0" data-aos="fade-down" data-aos-duration="3000" data-aos-once="true">
                     <a href="" class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -228,14 +230,17 @@
 
     <!-- *********Company Building************* -->
 
-    <section class="section4">
-        <div class="fixedBg">
-            <div class="fixedOverlay">
-                <h2>Goodies</h2>
-                <!-- <h1>Be different in your own way!</h1> -->
-                <h3>Your Destination for Goodies</h3>
+    <section class="section4 container-fluid m-0">
+        <div class="row m-0">
+            <div class="fixedBg">
+                <div class="fixedOverlay">
+                    <h2>Goodies</h2>
+                    <!-- <h1>Be different in your own way!</h1> -->
+                    <h3>Your Destination for Goodies</h3>
+                </div>
             </div>
         </div>
+        
         <div class="container" id="story">
             <h3>Our Story</h3>
             <p class="lead mb-5">
@@ -356,8 +361,8 @@
 
     <!-- Mission&Vision -->
     <div class="container">
-        <div class="data-show mt-5 row" id="mission">
-            <div class="col-md-6">
+        <div class="data-show mt-5 row m-0 flex-md-row-reverse" id="mission">
+            <div class="col-md-6 order-last">
                 <div class="text-show">
                     <h2>Mission</h2>
                     <p>
@@ -367,16 +372,14 @@
                 </div>
             </div>
             
-            <div class="col-md-6">
+            <div class="col-md-6 order-first">
                 <img src="assets/images/mission.jpg" alt="">
             </div>
             
         </div>
-        <div class="data-show row" id="vision">
-            <div class="col-md-6">
-                <img src="assets/images/vision.jpg" alt="">
-            </div>
-            <div class="col-md-6">
+        <div class="data-show row m-0 " id="vision">
+            
+            <div class="col-md-6 order-last  ">
                 <div class="text-show">
                     <h2>Vision</h2>
                     <p>
@@ -384,10 +387,13 @@
                     </p>
                 </div>
             </div>
+            <div class="col-md-6 order-first">
+                <img src="assets/images/vision.jpg" alt="">
+            </div>
         </div>
     
-        <div class="data-show row" id="export">
-            <div class="col-md-6">
+        <div class="data-show row m-0 flex-md-row-reverse" id="export">
+            <div class="col-md-6 order-last">
                 <div class="text-show">
                     <h2>Export</h2>
                     <p>
@@ -396,7 +402,7 @@
                 </div>
             </div>
             
-            <div class="col-md-6">
+            <div class="col-md-6 order-first">
                 <img src="assets/images/Export.jpg" alt="">
             </div>
             
@@ -406,25 +412,24 @@
 
     <!-- ***********footer************* -->
 
-    <footer>
-        <div class="social-media">
+    <footer class="nav m-0">
+            <div class="social-media text-center">
             <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
             <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram fa-xl"></i></a>
             <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
             <a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter fa-xl"></i></a>
             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
         </div>
-        <div class="footer-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#export">Export</a></li>
-                <li><a href="media.html">Media</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contactUs.html">Contact Us</a></li>
-                <li><a href="#">العربية</a></li>
-            </ul>
-        </div>
-        <p>&copy; 2023 Goodies Egypt</p>
+    </div>
+                <ul class="nav">
+                    <li class="nav-item m-2"><a href="index.html">Home</a></li>
+                    <li class="nav-item m-2"><a href="index.html#export">Export</a></li>
+                    <li class="nav-item m-2"><a href="media.html">Media</a></li>
+                    <li class="nav-item m-2"><a href="careers.html">Careers</a></li>
+                    <li class="nav-item m-2"><a href="contactUs.html">Contact Us</a></li>
+                    <li class="nav-item m-2"><a href="#">العربية</a></li>
+                </ul>
+        <div class="row text-center"><p>&copy; 2023 Goodies Egypt</p></div>
     </footer>
 
     <!-- ********************************** -->
