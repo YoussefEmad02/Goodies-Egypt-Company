@@ -25,31 +25,36 @@
 </head>
 
 <body>
-    <header>
+    <header class="bg-light">
         <div class="container">
             <div class="row">
-                <nav class="navbar">
+                <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="index.html">
                         <img class="logo-img" src="assets/images/LogoWithDescription.png" alt="Goodies Logo">
                     </a>
-                    <ul class="d-flex justify-content-between align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              About Us
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#story">Our story</a></li>
-                              <li><a class="dropdown-item" href="#mission">Mission</a></li>
-                              <li><a class="dropdown-item" href="#vision">Vision</a></li>
-                            </ul>
-                          </li>
-                        <li class="nav-item"><a class="nav-link" href="#export">Export</a></li>
-                        <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
-                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">العربية</a></li>
-                    </ul>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">About Us</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#story">Our story</a></li>
+                                    <li><a class="dropdown-item" href="#mission">Mission</a></li>
+                                    <li><a class="dropdown-item" href="#vision">Vision</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#export">Export</a></li>
+                            <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+                            <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">العربية</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -71,39 +76,19 @@
                 <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
             </div>
         </div>
-        <div class="row mt-5 mb-5">
-            <div class="col-md-6">
+        <div class="row mt-5 mb-5 flex-md-row-reverse" >
+            <div class="col-md-6 order-last">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel</h1>
                 <p class="date">August 5, 2018</p>
                 <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 order-first">
                 <img src="assets/images/mission.jpg" style="max-width: 100%;">
             </div>
         </div>
         <div class="row mt-5 mb-5">
             <div class="col-md-6">
-                <img src="assets/images/mission.jpg" style="max-width: 100%;">
-            </div>
-            <div class="col-md-6">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel</h1>
-                <p class="date">August 5, 2018</p>
-                <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
-            </div>
-        </div>
-        <div class="row mt-5 mb-5">
-            <div class="col-md-6">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel</h1>
-                <p class="date">August 5, 2018</p>
-                <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
-            </div>
-            <div class="col-md-6">
-                <img src="assets/images/mission.jpg" style="max-width: 100%;">
-            </div>
-        </div>
-        <div class="row mt-5 mb-5">
-            <div class="col-md-6">
-                <img src="assets/images/mission.jpg" style="max-width: 100%;">
+                <img src="assets/images/mission.jpg" style="max-width: 100%;" class="img-fluid">
             </div>
             <div class="col-md-6">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel</h1>
@@ -111,18 +96,39 @@
                 <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
             </div>
         </div>
+        <div class="row mt-5 mb-5 flex-md-row-reverse">
+            <div class="col-md-6 order-last">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel</h1>
+                <p class="date">August 5, 2018</p>
+                <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
+            </div>
+            <div class="col-md-6 order-first">
+                <img src="assets/images/mission.jpg" style="max-width: 100%;" class="img-fluid">
+            </div>
+        </div>
         <div class="row mt-5 mb-5">
+            <div class="col-md-6">
+                <img src="assets/images/mission.jpg" style="max-width: 100%;" class="img-fluid">
+            </div>
             <div class="col-md-6">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel</h1>
                 <p class="date">August 5, 2018</p>
                 <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
             </div>
-            <div class="col-md-6">
-                <img src="assets/images/mission.jpg" style="max-width: 100%;">
+        </div>
+        <div class="row mt-5 mb-5 flex-md-row-reverse">
+            <div class="col-md-6 order-last">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel</h1>
+                <p class="date">August 5, 2018</p>
+                <p class="colparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis vel tincidunt viverra. Mauris efficitur faucibus nisi, in cursus quam ornare nec. Proin dictum nisl risus, ut aliquet eros pellentesque quis. Nulla fermentum magna ut mollis blandit. Sed volutpat iaculis tellus non varius. Fusce euismod hendrerit nulla at interdum. Suspendisse tempor condimentum mi quis ullamcorper. Aliquam auctor auctor aliquam. Maecenas turpis diam, sodales sit amet elementum et, consequat ac arcu. In luctus quam hendrerit dui ullamcorper congue. Nullam laoreet nisl nec magna lacinia placerat. In pulvinar, elit sit amet aliquam facilisis, erat dui fermentum odio, ultricies hendrerit mi libero ut diam. Nulla facilisi. Pellentesque metus nisi, maximus at metus ullamcorper,</p>
+            </div>
+            <div class="col-md-6 order-first">
+                <img src="assets/images/mission.jpg" style="max-width: 100%;" class="img-fluid">
             </div>
         </div>
     </div>
-<footer>
+
+<footer class="m-0">
     <div class="social-media">
         <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
         <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram fa-xl"></i></a>
@@ -153,7 +159,9 @@
 </script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
