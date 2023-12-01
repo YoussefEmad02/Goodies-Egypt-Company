@@ -78,7 +78,18 @@ header.sticky .nav-link{
 header.sticky .nav-link:hover{
   color: var(--text);
 }
+.sidebar{
+  color: var(--green);
+  background-color: var(--light);
+}
 
+.navbar{
+  color: white;
+}
+
+.menu-button{
+  font-size: xx-large;
+}
 /* First Section */
 
 main {

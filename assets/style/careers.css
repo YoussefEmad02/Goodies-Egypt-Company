@@ -1,7 +1,9 @@
 .row {
     --bs-gutter-x: 0;
-  }
-  
+}
+
+.body
+
 main{
     background-image: url("/Assets/images/careers.jpg");
 }

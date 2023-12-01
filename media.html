@@ -21,50 +21,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <script src="https://kit.fontawesome.com/84089d0d98.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="bg-light">
+    <header>
         <div class="container">
             <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+                      <a class="navbar-brand fs-4" href="index.html">
                         <img class="logo-img" src="assets/images/LogoWithDescription.png" alt="Goodies Logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-expanded="false">About Us</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#story">Our story</a></li>
-                                    <li><a class="dropdown-item" href="#mission">Mission</a></li>
-                                    <li><a class="dropdown-item" href="#vision">Vision</a></li>
-                                </ul>
+                      </a>
+                      <!-- Toggle Button -->
+                      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="menu-button bx bx-menu"></span>
+                      </button>
+                      <!-- SideBar -->
+                      <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header border-bottom">
+                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Goodies Egypt</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#export">Export</a></li>
-                            <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
-                            <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">العربية</a></li>
-                        </ul>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                AboutUS
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#story">Our story</a></li>
+                                <li><a class="dropdown-item" href="#mission">Mission</a></li>
+                                <li><a class="dropdown-item" href="#vision">Vision</a></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="#export">Export</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="media.html">Media</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="careers.html">Careers</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
-<main class="media">
+
+    <main class="media">
     <div class="overlay">
         <h3>Media <span>and</span> News</h3>
     </div>
-    
-</main>
+    </main>
     <div class="container" style="margin-top: 60px;">
         <div class="row mt-5 mb-5">
             <div class="col-md-6">
@@ -128,40 +141,38 @@
         </div>
     </div>
 
-<footer class="m-0">
-    <div class="social-media">
+    <footer class="nav m-0">
+        <div class="social-media text-center">
         <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
         <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram fa-xl"></i></a>
         <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
         <a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter fa-xl"></i></a>
         <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
     </div>
-    <div class="footer-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#export">Export</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contactUs.html">Contact Us</a></li>
-            <li><a href="#">العربية</a></li>
-        </ul>
-    </div>
-    <p>&copy; 2023 Goodies Egypt</p>
-</footer>
+            <ul class="nav">
+                <li class="nav-item m-2"><a href="index.html">Home</a></li>
+                <li class="nav-item m-2"><a href="index.html#export">Export</a></li>
+                <li class="nav-item m-2"><a href="media.html">Media</a></li>
+                <li class="nav-item m-2"><a href="careers.html">Careers</a></li>
+                <li class="nav-item m-2"><a href="contactUs.html">Contact Us</a></li>
+                <li class="nav-item m-2"><a href="#">العربية</a></li>
+            </ul>
+    <div class="row text-center"><p>&copy; 2023 Goodies Egypt</p></div>
+    </footer>
 
 <!-- ********************************** -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init({
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
         duration: 3000,
         once: true,
-    });
-</script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        });
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
