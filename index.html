@@ -49,22 +49,28 @@
                         <div class="offcanvas-body">
                           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                              <a class="nav-link active" aria-current="page" href="index.html" data-lan="home">Home</a>
                             </li>
                             <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-lan="aboutus">
                                 AboutUS
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#story">Our story</a></li>
-                                <li><a class="dropdown-item" href="#mission">Mission</a></li>
-                                <li><a class="dropdown-item" href="#vision">Vision</a></li>
+                                <li><a class="dropdown-item" href="#story" data-lan="ourstory">Our story</a></li>
+                                <li><a class="dropdown-item" href="#mission" data-lan="mission">Mission</a></li>
+                                <li><a class="dropdown-item" href="#vision" data-lan="vision">Vision</a></li>
                               </ul>
                             </li>
-                            <li class="nav-item mx-2"><a class="nav-link" href="#export">Export</a></li>
-                            <li class="nav-item mx-2"><a class="nav-link" href="media.html">Media</a></li>
-                            <li class="nav-item mx-2"><a class="nav-link" href="careers.html">Careers</a></li>
-                            <li class="nav-item mx-2"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="#export" data-lan="export">Export</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="media.html" data-lan="media">Media</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="careers.html" data-lan="careers">Careers</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" href="contactUs.html" data-lan="contactus">Contact Us</a></li>
+                            <li>
+                                <select id="lanselect">
+                                    <option value="en" data-lan="english" selected>English</option>
+                                    <option value="ar" data-lan="arabic">Arabic</option>
+                                </select>
+                            </li>   
                           </ul>
                         </div>
                       </div>
@@ -76,13 +82,14 @@
 
     <main>
         <div class="overlay text-center">
-            <h3>WELCOME TO <span>GOODIES</span> Egypt Company</h3>
-            <p>Providing the best types of natural food products, including Egyptian cheese, mozzarella, Lebanese and
+            <h3 data-lan="welcome">WELCOME TO <span data-lan="goodies">GOODIES</span> Egypt Company</h3>
+            <p data-lan="upperp">Providing the best types of natural food products, including Egyptian cheese, mozzarella, Lebanese and
                 Syrian pastries, and frozen appetizers</p>
 
             <div class="buttons mt-4">
                 <button class="blob-btn btn btn-primary">
-                    Taste now
+                    <span  data-lan="tastenow">Taste now</span>
+                    
                     <span class="blob-btn__inner">
                         <span class="blob-btn__blobs">
                             <span class="blob-btn__blob"></span>
@@ -99,14 +106,14 @@
     <div class="container-fluid mt-5 contcards" >
         <div class="companies container">
             <div class="row">
-                <h1 class="text-center">Our Brands</h1>
+                <h1 class="text-center" data-lan="ourbrand">Our Brands</h1>
             </div>
             <div class="row cardrow">
                 <div class="card col-md-4 mb-4 border-0" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
                     <a href="#" class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <h2>Brand1</h2>
+                                <h2 data-lan="brand1">Brand1</h2>
                             </div>
                             <div class="flip-card-back">
                                 <h5>BY FAMILIES</h5>
@@ -121,7 +128,7 @@
                     <a href="" class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <h2>Brand2</h2>
+                                <h2 data-lan="brand2">Brand2</h2>
                             </div>
                             <div class="flip-card-back">
                                 <h5>BY FAMILIES</h5>
@@ -136,7 +143,7 @@
                     <a href="" class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <h2>Brand3</h2>
+                                <h2 data-lan="brand3">Brand3</h2>
                             </div>
                             <div class="flip-card-back">
                                 <h5>BY FAMILIES</h5>
@@ -247,29 +254,29 @@
         <div class="row m-0">
             <div class="fixedBg">
                 <div class="fixedOverlay">
-                    <h2>Goodies</h2>
+                    <h2 data-lan="goodies">Goodies</h2>
                     <!-- <h1>Be different in your own way!</h1> -->
-                    <h3>Your Destination for Goodies</h3>
+                    <h3 data-lan="destination">Your Destination for Goodies</h3>
                 </div>
             </div>
         </div>
         
         <div class="container" id="story">
-            <h3>Our Story</h3>
-            <p class="lead mb-5">
-                    Goodies Egypt is a Lebanese-Egyptian company specialized in the food industry. It was founded in 1999 by a Lebanese investor in Egypt. It owns a variety of food brands, including the “Chtaura” brand, which was named after the famous ancient Lebanese city. With natural cheese and dairy products.
-                    The brand (Chtaura) offers a range of Syrian, Lebanese and international cheeses, in addition to a variety of appetizers and frozen pastes such as goulash (baklava chips), samosas of various types, and many others.
-                    Goodies Egypt also owns the brand (Ritaj), which meets the needs of all customers with a different flavor.
-                    In addition, Goodies Egypt began launching a series of exhibitions under the brand (Goodies Patisserie), which specializes in producing all types of Eastern and Western sweets and the finest types of pastries.
-                    Goodies Egypt is planning to launch more brands to serve consumers from different categories.
-                    We at Goodies Egypt are committed to providing healthy food that conforms to the highest international standards and specifications. Our factories are equipped with the latest machines and a team of highly qualified professionals, as we have obtained many quality certificates, including the ISO 22000/2018 certificate, which ensures that our manufacturing processes and food safety procedures comply with global standards.
-                    We do not compromise on quality, and implement strict quality management programs for all our raw materials, ensuring that only premium products reach our customers.
-                    We also use packaging materials that adhere to approved food standards, underscoring our commitment to excellence.
-                    We understand the importance of maintaining product integrity throughout the supply chain, so we have a fleet of vehicles with precise temperature control.
-                    These vehicles are designed to transport our products according to specific storage grades, ensuring that our customers receive quality goods.
-                    Goodies Egypt continues to set new standards through its focus on quality, authenticity and customer satisfaction.
-                    Thanks to our rich history and unwavering commitment to excellence, we aim to be the preferred choice for natural Lebanese cheese products in Egypt and abroad.
-                    We are proud to provide the authentic taste that delights the senses.
+            <h3 data-lan="ourstory">Our Story</h3>
+            <p data-lan="ourstorypar" class="lead mb-5">
+                Goodies Egypt is a Lebanese-Egyptian company specialized in the food industry. It was founded in 1999 by a Lebanese investor in Egypt. It owns a variety of food brands, including the “Chtaura” brand, which was named after the famous ancient Lebanese city. With natural cheese and dairy products.
+                The brand (Chtaura) offers a range of Syrian, Lebanese and international cheeses, in addition to a variety of appetizers and frozen pastes such as goulash (baklava chips), samosas of various types, and many others.
+                Goodies Egypt also owns the brand (Ritaj), which meets the needs of all customers with a different flavor.
+                In addition, Goodies Egypt began launching a series of exhibitions under the brand (Goodies Patisserie), which specializes in producing all types of Eastern and Western sweets and the finest types of pastries.
+                Goodies Egypt is planning to launch more brands to serve consumers from different categories.
+                We at Goodies Egypt are committed to providing healthy food that conforms to the highest international standards and specifications. Our factories are equipped with the latest machines and a team of highly qualified professionals, as we have obtained many quality certificates, including the ISO 22000/2018 certificate, which ensures that our manufacturing processes and food safety procedures comply with global standards.
+                We do not compromise on quality, and implement strict quality management programs for all our raw materials, ensuring that only premium products reach our customers.
+                We also use packaging materials that adhere to approved food standards, underscoring our commitment to excellence.
+                We understand the importance of maintaining product integrity throughout the supply chain, so we have a fleet of vehicles with precise temperature control.
+                These vehicles are designed to transport our products according to specific storage grades, ensuring that our customers receive quality goods.
+                Goodies Egypt continues to set new standards through its focus on quality, authenticity and customer satisfaction.
+                Thanks to our rich history and unwavering commitment to excellence, we aim to be the preferred choice for natural Lebanese cheese products in Egypt and abroad.
+                We are proud to provide the authentic taste that delights the senses.
             </p>
         </div>
     </section>
@@ -377,8 +384,8 @@
         <div class="data-show mt-5 row m-0 flex-md-row-reverse" id="mission">
             <div class="col-md-6 order-last">
                 <div class="text-show">
-                    <h2>Mission</h2>
-                    <p>
+                    <h2 data-lan="mission">Mission</h2>
+                    <p data-lan="mispar">
                         Our ultimate goal is to provide healthy food for our children while actively participating in creating a more prosperous world.
                         Goodies Egypt is committed to enhancing the well-being of Egyptian families by achieving a prominent position in the market for Syrian, Lebanese, and Egyptian cheese, appetizers, pastries, and halal meat products. This achievement is achieved through the use of the latest technologies in our production, transportation, and distribution processes, as well as through the continuous development of our workforce and unwavering adherence to stringent food quality standards.	
                     </p>
@@ -394,8 +401,8 @@
             
             <div class="col-md-6 order-last  ">
                 <div class="text-show">
-                    <h2>Vision</h2>
-                    <p>
+                    <h2 data-lan="vision">Vision</h2>
+                    <p data-lan="visionpar">
                         Providing the best types of natural food products, including Egyptian cheese, mozzarella, Lebanese and Syrian pastries, and frozen appetizers, completely safe for the health of our children and manufactured with the latest machines and technology, and with the highest international quality standards, in order to contribute to achieving food security for the Egyptian family.
                     </p>
                 </div>
@@ -408,9 +415,14 @@
         <div class="data-show row m-0 flex-md-row-reverse" id="export">
             <div class="col-md-6 order-last">
                 <div class="text-show">
-                    <h2>Export</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quam qui reprehenderit accusantium? Similique, dignissimos fuga eaque harum delectus dicta ducimus reprehenderit, corrupti dolorem, quaerat omnis deleniti maxime dolores illo?
+                    <h2 data-lan="export">Export</h2>
+                    <p data-lan="exportpar">
+                        Exploring Global Markets, Savoring Triumphs. 
+                        As a prominent diversified food enterprise in the Middle East and Egypt, Goodies Egypt delivers services
+                        adhering to international quality standards. <br>
+                        Our commitment to excellence is evident in the promotion of high-quality & diverse categories of
+                        products, empowering your business with a range of various product options that translate into assured
+                        and diverse profits.                    
                     </p>
                 </div>
             </div>
@@ -433,14 +445,16 @@
             <a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter fa-xl"></i></a>
             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
         </div>
-                <ul class="nav">
-                    <li class="nav-item m-2"><a href="index.html">Home</a></li>
-                    <li class="nav-item m-2"><a href="index.html#export">Export</a></li>
-                    <li class="nav-item m-2"><a href="media.html">Media</a></li>
-                    <li class="nav-item m-2"><a href="careers.html">Careers</a></li>
-                    <li class="nav-item m-2"><a href="contactUs.html">Contact Us</a></li>
-                    <li class="nav-item m-2"><a href="#">العربية</a></li>
-                </ul>
+        <div>
+            <ul class="nav">
+                <li class="nav-item m-2"><a href="index.html" data-lan="home">Home</a></li>
+                <li class="nav-item m-2"><a href="index.html#export" data-lan="export">Export</a></li>
+                <li class="nav-item m-2"><a href="media.html" data-lan="media">Media</a></li>
+                <li class="nav-item m-2"><a href="careers.html" data-lan="careers">Careers</a></li>
+                <li class="nav-item m-2"><a href="contactUs.html" data-lan="contactus">Contact Us</a></li>
+                <li class="nav-item m-2"><a href="#">العربية</a></li>
+            </ul>
+        </div>
         <div class="row text-center"><p>&copy; 2023 Goodies Egypt</p></div>
     </footer>
 
@@ -457,6 +471,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/languageAdd.js"></script>
 
 </body>
 
