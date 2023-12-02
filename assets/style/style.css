@@ -1009,11 +1009,11 @@ label{
 }
 
 input,textarea,select,.info input, .message input{
-  height: 30px !important;
+  /* height: 30px !important; */
   border: 0px !important;
-  background-color: var(--main) !important;
-  border-bottom: 1px solid var(--green) !important;
-  padding: 25px !important;
+  /* background-color: var(--main) !important; */
+  /* border-bottom: 1px solid var(--green) !important; */
+  /* padding: 25px !important; */
   color: var(--green) !important;
   outline: var(--green) !important;
   outline-width: 1px !important;
@@ -1086,4 +1086,31 @@ input[type='radio']:checked:after {
 .dropdown-item:focus, .dropdown-item:hover{
   background-color: var(--green);
   color: var(--light);
+}
+
+
+
+
+/* Style the language select element */
+#lanselect {
+  /* padding: 8px; */
+  margin-top: 10px;
+  font-size: 20px;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  background-color: var(--light);
+}
+
+/* Style the options */
+
+/* Customize dropdown menu items */
+#lanselect option {
+  background-color: var(--light); /* Set background color */
+  color: var(--green); /* Set text color */
+ }
+
+/* Style the selected option */
+#lanselect option:checked {
+  background-color: var(--light); /* Change to your preferred color */
+  color: var(--green);
 }
