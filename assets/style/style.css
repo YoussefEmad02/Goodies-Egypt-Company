@@ -18,7 +18,10 @@ body {
   background-color: var(--light);
   /* scroll-behavior: smooth; */
   font-family: 'Roboto', sans-serif;
-  height: 100vh;
+  height: 100%;
+}
+html, body{
+  overflow-x: hidden;
 }
 
 /******************** Header & navBar ******************/
@@ -975,7 +978,6 @@ label{
 }
 .message{
   margin-top: 10px;
-  height: 15%;
   display: flex;
   flex-direction: column;
 }
