@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./pictures/logo.png">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="sign">
+    <div class="container mt-5">
+        <img class="logo-img mb-4" src="assets/images/goodies-logo.svg" alt="Goodies Logo" width="100px">
+        <!-- Login Form -->
+        <form id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="loginUsername">Username:</label>
+                <input type="text" class="form-control" id="loginUsername" name="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i id="showLoginPassword" class="bx bx-hide" style="cursor: pointer;"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success" id="loginbut">Login</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Your custom script -->
+    <script src="./js/java.js"></script>
+    <script>
+        var showLoginPassword = document.getElementById('showLoginPassword');
+        var loginPasswordInput = document.getElementById('loginPassword');
+
+        if (showLoginPassword) {
+            showLoginPassword.addEventListener('click', () => {
+                if (loginPasswordInput.type === 'password') {
+                    loginPasswordInput.type = 'text';
+                    showLoginPassword.classList.remove('bx-hide');
+                    showLoginPassword.classList.add('bx-show');
+                } else {
+                    loginPasswordInput.type = 'password';
+                    showLoginPassword.classList.remove('bx-show');
+                    showLoginPassword.classList.add('bx-hide');
+                }
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#loginbut').on('click', function () {
+                var email = $('#loginUsername').val();
+                var password = $('#loginPassword').val();
+    
+                if (email == '' || password == '') {
+                    alert('Please fill all the fields');
+                    return false;
+                }
+    /*
+                var formData = new FormData();
+                formData.append('email', email);
+                formData.append('password', password);
+    */
+                var formData = {
+                    email: email,
+                    password: password
+                };
+                $.ajax({
+                    url: 'http://localhost:3000/api/user/login',
+                    type: 'POST',
+                    data: JSON.stringify(formData),
+                    contentType: 'application/json',
+                   // processData: false,
+                    //contentType: false,
+                    success: function (response) {
+                        $("#loginForm")[0].reset();
+                        alert('Login successful!');
+                        console.log(response);
+                        // Assuming the token is included in the response
+                        var token = response.token;
+                        console.log(token);
+    
+                        // Redirect to the index page with the token in the query parameter
+                        window.location.href = "./index?token=" + token;
+                    },
+                    error: function (error) {
+                        alert('Wrong username or password');
+                        console.error(error);
+                    }
+                });
+    
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

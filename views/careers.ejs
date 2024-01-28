@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="x, y, ,etc" />
+    <meta name="description" content="x, y, ,etc">
+    <meta name="author" content="x, y, ,etc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/style/sass.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/carousel.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="icon" type="image/png" href="assets/images/goodies-logo.svg" />
+
+    <title>Goodies Egypt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/84089d0d98.js" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+    <div class="container-fluid mt-5 " >
+        <div class="row d-flex justify-content-center" style="margin-top: 200px;--bs-gutter-x: 0; ">
+
+            <div class="col-md-6">
+                <h3 class="text-center title" data-lan="careers">Careers</h3>
+                <p class="text-center" data-lan="jointeam">Join our team.</p>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label" data-lan="namelabel">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label" data-lan="experience">Experience</label>
+                            <input type="number" start="0" step="1" min="0" class="form-control" id="experience">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label" data-lan="mobile">Mobile1</label>
+                            <input type="text" class="form-control" id="mobile1">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label" data-lan="mobile">Mobile1</label>
+                            <input type="text" class="form-control" id="mobile2">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="birthdate" class="form-label" data-lan="datelabel">Birth Date</label>
+                            <input type="date" class="form-control" id="birthdate">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label" data-lan="maillabel">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label" data-lan="area">area</label>
+                            <input type="text" class="form-control" id="area">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label" data-lan="state">state</label>
+                            <input type="text" class="form-control" id="state">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="job" class="form-label" data-lan="jobtype">Job</label>
+                            <select class="form-control" id="job">
+                                <option></option>
+                                <option value='مهندس إنتاج'>مهندس إنتاج</option>
+                                <option value='مشرف القسم'>مشرف القسم</option>
+                                <option value='عامل ماكينه'>عامل ماكينه</option>
+                                <option value='عامل إنتاج'>عامل إنتاج</option>
+                                <option value='عامل تعبئه وتحميل'>عامل تعبئه وتحميل</option>
+                                <option value='عامل نظافه'>عامل نظافه</option>
+                                <option value='مدير الحركه والنقل'>مدير الحركه والنقل</option>
+                                <option value='سائق'>سائق</option>
+                                <option value='مدير مخازن'>مدير مخازن</option>
+                                <option value='أمين مخزن'>أمين مخزن</option>
+                                <option value='عامل مخزن'>عامل مخزن</option>
+                                <option value='  رئيس مكتب الامن'>  رئيس مكتب الامن</option>
+                                <option value='مشرف امن'>مشرف امن</option>
+                                <option value='فرد امن'>فرد امن</option>
+                                <option value='مدير الصيانه'>مدير الصيانه</option>
+                                <option value='ميكانيكى'>ميكانيكى</option>
+                                <option value='مساعد ميكانيكى'>مساعد ميكانيكى</option>
+                                <option value='كهربائى'>كهربائى</option>
+                                <option value='مساعد كهربائى'>مساعد كهربائى</option>
+                                <option value='سباك'>سباك</option>
+                                <option value='مستقطب عماله'>مستقطب عماله</option>
+                                <option value='مسئول التدريب والمتابعه'>مسئول التدريب والمتابعه</option>
+                                <option value='مسئول الاسكان والمواصلات'>مسئول الاسكان والمواصلات</option>
+                                <option value='محاسب اجور واستحقاقات'>محاسب اجور واستحقاقات</option>
+                                <option value='منظم العمل بين الاقسام'>منظم العمل بين الاقسام</option>
+                                <option value='مدخل بيانات'>مدخل بيانات</option>
+                                <option value='رئيس مكتب مراقبة الجوده'>رئيس مكتب مراقبة الجوده</option>
+                                <option value='مهندس جودة'>مهندس جودة</option>
+                                <option value='السلامه والصحه المهنيه'>السلامه والصحه المهنيه</option>
+                                <option value='مدير العمليات والمشاريع'>مدير العمليات والمشاريع</option>
+                                <option value='العقود والمشتريات'>العقود والمشتريات</option>
+                                <option value='التكاليف'>التكاليف</option>
+                                <option value='مراقبة الخامات والموجودات'>مراقبة الخامات والموجودات</option>
+                                <option value='التواصل الاجتماعى'>التواصل الاجتماعى</option>
+                                <option value='مصمم جرافيك'>مصمم جرافيك</option>
+                                <option value='علاقات عامه'>علاقات عامه</option>
+                                <option value='اتصال'>اتصال</option>
+                                <option value='مدير ماركه'>مدير ماركه</option>
+                                <option value='الخزينه'>الخزينه</option>
+                                <option value='الحسابات'>الحسابات</option>
+                                <option value='مدقق عملاء ومبيعات'>مدقق عملاء ومبيعات</option>
+                                <option value='مراجع مخازن وموجودات'>مراجع مخازن وموجودات</option>
+                                <option value='مراجع اصول ثابته'>مراجع اصول ثابته</option>
+                                <option value='محاسب ضرائب'>محاسب ضرائب</option>
+                                <option value='محاسب  '>محاسب  </option>
+                                <option value='مدخل بيانات'>مدخل بيانات</option>
+                                <option value='مندوب مشتريات'>مندوب مشتريات</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cv" class="form-label" data-lan="resumeatt">CV</label>
+                            <input type="file" class="form-control" id="cv" accept="image/*,.pdf">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="message" class="form-label" data-lan="message">Message</label>
+                            <textarea class="form-control" rows="10" id="message"></textarea>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="buttons text-center">
+                                <button class="blob-btn btn btn-success" data-lan="applynow" id="sendMessageTo">
+                                    Send Message
+                                    <span class="blob-btn__inner">
+                                        <span class="blob-btn__blobs">
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                            <span class="blob-btn__blob"></span>
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div aria-live="polite" aria-atomic="true"  class="d-flex justify-content-center align-items-center w-100">
+                    <div class="toast-container" style="position: absolute; bottom: 20px; left: 10px;">
+                        <div class="toast bg-light text-white" role="alert" id="successToast" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                            <div class="toast-header text-success">
+                                <i class="fas fa-check-double"></i>
+                                <strong class="me-auto"> Goodies Egypt</strong>
+                            </div>
+                            <div class="toast-body text-dark">
+                                Your CV has been sent.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-live="polite" aria-atomic="true"  class="d-flex justify-content-center align-items-center w-100">
+                    <div class="toast-container" style="position: absolute; bottom: 20px; left: 10px;">
+                        <div class="toast bg-light text-white" role="alert" id="failedToast" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                            <div class="toast-header text-danger">
+                                <i class="fas fa-times"></i>
+                                <strong class="me-auto"> Goodies Egypt</strong>
+                            </div>
+                            <div class="toast-body text-dark">
+                                Your CV couldn't be sent.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $('#sendMessageTo').on('click', function() {
+                        var file_data = $('#cv').prop('files')[0]   
+                            ,form_data = new FormData()    
+                            ,senderName = $("#name").val()
+                            ,senderMail = $("#email").val()
+                            ,senderMobile1 = $("#mobile1").val()
+                            ,senderMobile2 = $("#mobile2").val()
+                            ,senderArea = $("#area").val()
+                            ,senderBirth = $("#birthdate").val()
+                            ,senderExperience = $("#experience").val()
+                            ,senderJob = $("#job").val()
+                            ,senderState = $("#state").val()
+                            ,senderMessage = $("#message").val()
+                            ;       
+                        form_data.append('ajaxCv', file_data);
+                        form_data.append('ajaxName',senderName);
+                        form_data.append('ajaxMail',senderMail);
+                        form_data.append('ajaxMobile1',senderMobile1);
+                        form_data.append('ajaxMobile2',senderMobile2);
+                        form_data.append('ajaxArea',senderArea);
+                        form_data.append('ajaxBirth',senderBirth);
+                        form_data.append('ajaxExperience',senderExperience);
+                        form_data.append('ajaxJob',senderJob);
+                        form_data.append('ajaxState',senderState);
+                        form_data.append('ajaxMessage',senderMessage);
+                        form_data.append('getMessage',1);                          
+                        $.ajax({
+                            url: 'ajax/send_cv.php', // <-- point to server-side PHP script 
+                            dataType: 'text',  // <-- what to expect back from the PHP script, if anything
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            data: form_data,                         
+                            type: 'post',
+                            success	: function(result)
+                            {
+                                $("#name").val("");
+                                $("#email").val("");
+                                $("#mobile1").val("");
+                                $("#mobile2").val("");
+                                $("#area").val("");
+                                $("#birthdate").val("");
+                                $("#experience").val("");
+                                $("#job").val("");
+                                $("#cv").val("");
+                                $("#state").val("");
+                                $("#message").val("");
+                                var toastLiveExampleDemo = document.getElementById('successToast');
+                                var toastDemo = new bootstrap.Toast(toastLiveExampleDemo, {
+                                    delay: 8000
+                                })
+                                toastDemo.show();
+                            },
+                            error : function(error)
+                            {
+                                var toastFailedDemo = document.getElementById('failedToast');
+                                var toastNotDoneDemo = new bootstrap.Toast(toastFailedDemo, {
+                                    delay: 8000
+                                })
+                                toastNotDoneDemo.show();
+                            }
+                        });
+                        return false;
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include("./partials/footer.ejs") %>
+
+    <!-- ************ -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: true,
+        });
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/languageAdd.js"></script>
+
+
+</body>
+
+</html>
