@@ -1,0 +1,101 @@
+<header>
+    <div class="container-fluid">
+        <div class="row" style="--bs-gutter-x:0;">
+            <nav class="navbar navbar-expand-xl ">
+                <div class="container-fluid" style="width: 85%;">
+                  <a class="navbar-brand fs-4" href="index">
+                    <img class="logo-img" src="assets/images/goodies-logo.svg" alt="Goodies Logo">
+                  </a>
+                  <!-- Toggle Button -->
+                  <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="menu-button bx bx-menu"></span>
+                  </button>
+                  <!-- SideBar -->
+                  <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">جوديز مصر</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+                        <li class="nav-item mx-4">
+                          <a class="nav-link active" aria-current="page" href="dashboard" data-lan="home" id="home">الصفحه الرئيسيه </a>
+                        </li>
+                        <li class="nav-item dropdown mx-4">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-lan="aboutus" id="aboutus">
+                            حولنا
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="indexarabic#story" data-lan="ourstory">قصتنا</a></li>
+                            <li><a class="dropdown-item" href="indexarabic#mission" data-lan="mission">مهمتنا</a></li>
+                            <li><a class="dropdown-item" href="indexarabic#vision" data-lan="vision">رؤيتنا</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item mx-4"><a class="nav-link" href="indexarabic#export" data-lan="export" id="export">التصدير</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link" href="media" data-lan="media" id="media">الوسائط</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link" href="forms-careers" data-lan="careers" id="careers">الوظائف</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link" href="forms-contactus" data-lan="contactus" id="contactus"> نواصل معنا</a></li>
+                        <li class="nav-item mx-4">
+                          <select id="pageSelect" class="lanselect" onchange="navigate()">
+                            <option value="indexarabic" selected>العربية</option>
+                            <option value="index"  >الانجليزية</option>
+                            
+                        </select>
+                        </li>   
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+  </header>
+  <script>
+    $(document).ready(function () {
+       $.ajax({
+      url: 'http://localhost:3000/api/nav',
+      type: 'GET',
+      dataType: 'json',
+      success: function (data) {
+  
+          if (data.nav && data.nav.length > 0) {
+              const navData = data.nav[0];
+   const home = navData.home;
+    const aboutus = navData.aboutUs;
+    const exportt = navData.export;
+    const media = navData.media;
+    const careers = navData.careers;
+    const contactus = navData.contactUs;
+    console.log(home);
+              if(home===0){
+                $('#home').closest('.nav-item').hide(); 
+                     
+              }
+              if(aboutus===0){
+                $('#aboutus').closest('.nav-item').hide(); 
+                     
+              }
+              if(exportt===0){
+                $('#export').closest('.nav-item').hide(); 
+                     
+              }
+              if(media===0){
+                $('#media').closest('.nav-item').hide(); 
+                     
+              }
+                if(careers===0){
+                    $('#careers').closest('.nav-item').hide(); 
+                         
+                }
+                if(contactus===0){
+                    $('#contactus').closest('.nav-item').hide(); 
+                         
+                }
+          }
+      },
+      error: function (error) {
+          console.error('Error fetching data from API:', error);
+      }
+  });
+  });
+  </script>

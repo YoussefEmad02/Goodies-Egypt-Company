@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="x, y, ,etc" />
+    <meta name="description" content="x, y, ,etc">
+    <meta name="author" content="x, y, ,etc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./Assets/style/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="assets/style/sass.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/carousel.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="icon" type="image/png" href="assets/images/goodies-logo.svg" />
+
+    <title>جوديز مصر </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/84089d0d98.js" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body dir="rtl">
+    <%- include("./partials/navbararabic.ejs") %>
+
+    <main>
+        <div class="overlay text-center" id="vidd">
+            <img src="" alt="" style="width: 100%;">
+        </div>
+    </main>
+
+    <div class="container-fluid mt-5 contcards">
+        <div class="companies container">
+            <div class="row">
+                <h1 class="text-center" data-lan="ourbrand">علاماتنا التجاريه </h1>
+            </div>
+            <div class="row cardrow">
+           
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section4 container-fluid m-0">
+        <div class="row m-0">
+            <div class="fixedBg">
+                <div class="fixedOverlay"id="fixedOverlay">
+                    <h2 data-lan="goodies"></h2>
+                    <img src="" alt="">
+                    <h3 data-lan="destination"></h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" id="story">
+            <h3 data-lan="ourstory"></h3>
+            <p data-lan="ourstorypar" class="lead mb-5">
+                     </p>
+        </div>
+    </section>
+
+    <div class="slider-container">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+  
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">السابق</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">التالي</span>
+  </button>
+</div>
+    </div>
+    <!-- *************END- SLIDE SHOW*************** -->
+
+    <!-- Mission&Vision -->
+    <div class="container">
+        <div class="data-show mt-5 row m-0 flex-md-row-reverse" id="mission">
+            <div class="col-md-6 order-last">
+                <div class="text-show">
+                    <h2 data-lan="mission"></h2>
+                    <p data-lan="mispar">
+                       </p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 order-first d-flex">
+                <img src="" alt="">
+            </div>
+            
+        </div>
+        <div class="data-show row m-0 " id="vision">
+            
+            <div class="col-md-6 order-last  ">
+                <div class="text-show">
+                    <h2 data-lan="vision"></h2>
+                    <p data-lan="visionpar">
+                         </p>
+                </div>
+            </div>
+            <div class="col-md-6 order-first d-flex">
+                <img src="" alt="">
+            </div>
+        </div>
+    
+        <div class="data-show row m-0 flex-md-row-reverse" id="export">
+            <div class="col-md-6 order-last">
+                <div class="text-show">
+                    <h2 data-lan="export"></h2>
+                    <p data-lan="exportpar">
+                                       
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 order-first d-flex">
+                <img src="" alt="">
+            </div>
+            
+        </div>
+    </div>
+    <!-- ************************************ -->
+
+    <!-- ***********footer************* -->
+
+    <%- include("./partials/footerarabic.ejs") %>
+
+    <!-- ********************************** -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: true,
+        });
+    </script>
+    <script>
+       $.ajax({
+    url: 'http://localhost:3000/api/Home',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {
+        // Update the content with the data retrieved from the API
+        if (data.Home && data.Home.length > 0) {
+            const homeData = data.Home[0];
+
+            // Update mispar
+            $('[data-lan="mispar"]').text(homeData.MissionParaArabic);
+            $('[data-lan="mission"]').text(homeData.MissionHeaderArabic);
+
+            // Update visionpar
+            $('[data-lan="visionpar"]').text(homeData.VisionParaArabic);
+            $('[data-lan="vision"]').text(homeData.VisionHeaderArabic);
+
+            // Update exportpar
+            $('[data-lan="exportpar"]').text(homeData.ExportParaArabic);
+            $('[data-lan="export"]').text(homeData.ExportHeaderArabic);
+
+            // Update ourstorypar
+            $('[data-lan="ourstorypar"]').text(homeData.OurStoryParaArabic);
+            $('[data-lan="ourstory"]').text(homeData.OurStoryHeaderArabic);
+
+            // Update carousel images
+            $('.carousel-item:nth-child(1) img').attr('src', homeData.Image1);
+            $('.carousel-item:nth-child(2) img').attr('src', homeData.Image2);
+            $('.carousel-item:nth-child(3) img').attr('src', homeData.Image3);
+
+            // Update mission image
+            $('#mission img').attr('src', homeData.MissionImg);
+            displayBase64Image(homeData.MissionImgData, '#mission img');
+            // Update vision image
+            $('#vision img').attr('src', homeData.VisionImg);
+            displayBase64Image(homeData.VisionImgData, '#vision img');
+            // Update export image
+            $('#export img').attr('src', homeData.ExportImg);
+
+            // Display images using base64 encoding
+            displayBase64Image(homeData.ExportImgData, '#export img');
+
+            $('#vidd img').attr('src', homeData.FirstVideo);
+            displayBase64Image(homeData.FirstVideoData, '#vidd img');
+
+            $('.fixedBg').css('background-image', 'url(data:image/png;base64,' + homeData.backgroundData + ')');
+
+            // Repeat the process for other image fields if needed
+            // ...
+
+        }
+    },
+    error: function (error) {
+        console.error('Error fetching data from API:', error);
+    }
+});
+$.ajax({
+    url: 'http://localhost:3000/api/brands',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {
+        const brands = data.brand;
+        const cardRow = $('.cardrow');
+
+        brands.forEach(brand => {
+            const brandCard = `
+            <div class="card col-md-4 mb-4 border-0" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+                <a href="${brand.link}" class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="data:image/jpeg;base64,${brand.imageData}" alt="${brand.name}" class="brand-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>${brand.paraar}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            `;
+            cardRow.append(brandCard);
+        });
+    },
+    error: function (error) {
+        console.error('Error fetching brand data:', error);
+    }
+});
+
+$.ajax({
+    url: 'http://localhost:3000/api/Carousel',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {
+      const carouselItems = data.carousel;
+      const carouselInner = $('.carousel-inner');
+
+      carouselItems.forEach((item, index) => {
+        const activeClass = index === 0 ? 'active' : ''; // Add 'active' class to first item
+        const carouselItem = `
+          <div class="carousel-item ${activeClass}">
+            <img src="data:image/jpeg;base64,${item.imageData}" class="d-block w-100 img-fluid" alt="Carousel Image">
+          </div>
+        `;
+        carouselInner.append(carouselItem);
+      });
+    },
+    error: function (error) {
+      console.error('Error fetching carousel data:', error);
+    }
+  });
+// Function to display base64-encoded image
+function displayBase64Image(base64Image, selector) {
+    if (base64Image) {
+        $(selector).attr('src', 'data:image/jpeg;base64,' + base64Image);
+    } else {
+        // Handle the case where there is no image data
+        console.log('No image data available');
+    }
+}
+    </script>
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/languageAdd.js"></script> -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script>
+        function navigate() {
+          var selectElement = document.getElementById("pageSelect");
+          var selectedPage = selectElement.options[selectElement.selectedIndex].value;
+          if (selectedPage) {
+            window.location.href = selectedPage;
+          }
+        }
+        </script>
+
+</body>
+
+</html>

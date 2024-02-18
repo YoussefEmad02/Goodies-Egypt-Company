@@ -1,0 +1,107 @@
+<footer class="nav m-0 pt-3">
+    <div class="social-media text-center">
+      <a href=""><i class="fa-brands fa-square-facebook fa-xl" id="facebook"></i></a>
+      <a href=""><i class="fa-brands fa-square-instagram fa-xl" id="insta"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin fa-xl" id="linkedin"></i></a>
+      <a href=""><i class="fa-brands fa-square-twitter fa-xl" id="twitter"></i></a>
+      <a href=""><i class="fa-brands fa-youtube fa-xl" id="youtube"></i></a>
+    </div>
+    <div>
+      <ul class="nav">
+          <li class="nav-item m-2"><a href="index" data-lan="home" id="homefoot">الصفحه الرئيسيه</a></li>
+          <li class="nav-item m-2"><a href="index#export" data-lan="export" id="exportfoot">التصدير</a></li>
+          <li class="nav-item m-2"><a href="media" data-lan="media" id="mediafoot">الوسائط</a></li>
+          <li class="nav-item m-2"><a href="careers" data-lan="careers" id="careersfoot">الوظائف</a></li>
+          <li class="nav-item m-2"><a href="contactUs" data-lan="contactus" id="conactusfoot">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div class="row text-center"><p>&copy; 2023 Goodies Egypt</p></div>
+    </footer>
+    <script>
+      // AJAX request to fetch social media links
+      $.ajax({
+      url: 'http://localhost:3000/api/links',
+      type: 'GET',
+      dataType: 'json',
+      success: function (data) {
+          const links = data.link[0];
+          console.log(links.facebook);
+  
+          $('#facebook').on('click', function(event) {
+              event.preventDefault();
+              window.open(links.facebook, '_blank');
+          });
+  
+          $('#insta').on('click', function(event) {
+              event.preventDefault();
+              window.open(links.instagram, '_blank');
+          });
+  
+          $('#linkedin').on('click', function(event) {
+              event.preventDefault();
+              window.open(links.linkedin, '_blank');
+          });
+  
+          $('#twitter').on('click', function(event) {
+              event.preventDefault();
+              window.open(links.twitter, '_blank');
+          });
+  
+          $('#youtube').on('click', function(event) {
+              event.preventDefault();
+              window.open(links.youtube, '_blank');
+          });
+      },
+      error: function (error) {
+          console.error('Error fetching social media links:', error);
+      }
+  });
+  $(document).ready(function () {
+         $.ajax({
+        url: 'http://localhost:3000/api/nav',
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+    
+            if (data.nav && data.nav.length > 0) {
+                const navData = data.nav[0];
+     const home = navData.home;
+      const aboutus = navData.aboutUs;
+      const exportt = navData.export;
+      const media = navData.media;
+      const careers = navData.careers;
+      const contactus = navData.contactUs;
+      console.log(home);
+                if(home===0){
+                  $('#homefoot').closest('.nav-item').hide(); 
+                       
+                }
+                if(aboutus===0){
+                  $('#aboutusfoot').closest('.nav-item').hide(); 
+                       
+                }
+                if(exportt===0){
+                  $('#exportfoot').closest('.nav-item').hide(); 
+                       
+                }
+                if(media===0){
+                  $('#mediafoot').closest('.nav-item').hide(); 
+                       
+                }
+                  if(careers===0){
+                      $('#careersfoot').closest('.nav-item').hide(); 
+                           
+                  }
+                  if(contactus===0){
+                      $('#conactusfoot').closest('.nav-item').hide(); 
+                           
+                  }
+            }
+        },
+        error: function (error) {
+            console.error('Error fetching data from API:', error);
+        }
+    });
+    });
+  </script>
+  

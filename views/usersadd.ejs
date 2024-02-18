@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>crud dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!----css3---->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!--google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!--google material icon-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+
+     <link rel="stylesheet" href="assets/style/sass.css">
+     <link rel="stylesheet" href="assets/style/style.css">
+     <link rel="stylesheet" href="assets/style/carousel.css">
+ 
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+ 
+     <link rel="icon" type="image/png" href="assets/images/goodies-logo.svg" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <script src="https://kit.fontawesome.com/84089d0d98.js" crossorigin="anonymous"></script>
+     <style>
+        .red-border {
+            border: 2px solid red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="body-overlay"></div>
+        <!-------------------------sidebar------------>
+        <div style="direction: ltr;">
+        <!-- Sidebar  -->
+        <%- include("./partials/sidebar.ejs") %>
+        </div>
+        <!--------page-content---------------->
+
+        <div id="content">
+            <!--top--navbar----design--------->
+            <div style="direction: ltr;">
+
+            <div class="top-navbar">
+                <div class="xp-topbar">
+                    <!-- Start XP Row -->
+                    <div class="row">
+                        <!-- Start XP Col -->
+                        <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                            <div class="xp-menubar">
+                                <span class="material-icons text-white">signal_cellular_alt
+                                </span>
+                            </div>
+                        </div>
+                        <!-- End XP Col -->
+
+                        <!-- Start XP Col -->
+                        <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                          
+                        </div>
+                        <!-- End XP Col -->
+
+                        <!-- Start XP Col -->
+                        <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+                            
+                        </div>
+                        <!-- End XP Col -->
+                    </div>
+                    <!-- End XP Row -->
+                </div>
+                    <div class="xp-breadcrumbbar text-center mb-4  " >
+                        <h4 class="page-title">Users</h4>
+                    </div>
+                
+            </div>
+            </div>
+            <!--------main-content------------->
+            <main style="height: 120vh;">
+                <form id="adduserForm" class="login-form" onsubmit="validateForm(event)">
+                    <h2>Add User</h2>
+                    <div class="form-group">
+                        <label for="fName">First Name:</label>
+                        <input type="text" class="form-control" id="fName" name="fName" style="background-color: rgb(232, 240, 254);" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lName">Last Name:</label>
+                        <input type="text" class="form-control" id="lName" name="lName" style="background-color: rgb(232, 240, 254);" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" style="background-color: rgb(232, 240, 254);" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password:</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="Password" name="Password" style="background-color: rgb(232, 240, 254);" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i id="showPassword" class="bx bx-hide" style="cursor: pointer;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rePassword">Re-Password:</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="rePassword" name="rePassword" style="background-color: rgb(232, 240, 254);" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i id="showPassword2" class="bx bx-hide" style="cursor: pointer;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="addubut">Add</button>
+                </form>
+             
+               <!------main-content-end-----------> 
+            </main>
+             
+
+            <footer class="footer" style="width: 100%;">
+                <div class="container-fluid">
+                    <div class="footer-in" >
+                        <p class="mb-0"  >
+                            &copy 2023 Goodies Egypt - All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!----------html code compleate----------->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".xp-menubar").on("click", function () {
+                $("#sidebar").toggleClass("active");
+                $("#content").toggleClass("active");
+            });
+
+            $(".xp-menubar,.body-overlay").on("click", function () {
+                $("#sidebar,.body-overlay").toggleClass("show-nav");
+            });
+        });
+    </script>
+
+    <script>
+        var showLoginPassword = document.getElementById('showPassword');
+        var showLoginrePassword = document.getElementById('showPassword2');
+        var loginPasswordInput = document.getElementById('Password');
+        var loginrePasswordInput = document.getElementById('rePassword');
+        if (showLoginPassword) {
+            showLoginPassword.addEventListener('click', () => {
+                if (loginPasswordInput.type === 'password') {
+                    loginPasswordInput.type = 'text';
+                    showLoginPassword.classList.remove('bx-hide');
+                    showLoginPassword.classList.add('bx-show');
+                } else {
+                    loginPasswordInput.type = 'password';
+                    showLoginPassword.classList.remove('bx-show');
+                    showLoginPassword.classList.add('bx-hide');
+                }
+            });
+        }
+        if (showLoginrePassword) {
+            showLoginrePassword.addEventListener('click', () => {
+                if (loginrePasswordInput.type === 'password') {
+                    loginrePasswordInput.type = 'text';
+                    showLoginrePassword.classList.remove('bx-hide');
+                    showLoginrePassword.classList.add('bx-show');
+                } else {
+                    loginrePasswordInput.type = 'password';
+                    showLoginrePassword.classList.remove('bx-show');
+                    showLoginrePassword.classList.add('bx-hide');
+                }
+            });
+        }
+    </script>
+ <script>
+
+    $(document).ready(function () {
+                    $('#addubut').on('click', function () {
+                        var fName = $('#fName').val();
+                        var LName = $('#lName').val();
+                        var email = $('#email').val();
+                        var Password = $('#Password').val();
+
+                        var password = document.getElementById('Password').value;
+                        var rePassword = document.getElementById('rePassword').value;
+                        if (fName == '' ||  LName == '' || email == '' ||Password == '' ) {
+                            alert('Please fill all the fields');
+                            return false;
+                        }
+            
+                        console.log(fName);
+            
+                        var formData = {
+                            'firstname': fName,
+                            'lastname': LName,
+                            'email': email,
+                            'password': Password,
+                        };
+
+            console.log(formData);
+            if (password !== rePassword) {
+        // If passwords don't match, prevent form submission
+        document.getElementById('Password').classList.add('red-border');
+        document.getElementById('rePassword').classList.add('red-border');
+        alert('Passwords do not match. Please re-enter.');
+        event.preventDefault();
+      }
+      else {
+                        $.ajax({
+                            url: 'http://localhost:3000/api/user',
+                            type: 'post',
+                            data: JSON.stringify(formData),
+                            contentType: 'application/json',
+                            success: function (response) {
+                                $("#adduserForm")[0].reset();
+                                alert('Data submitted successfully!');
+                            },
+                            error: function (error) {
+                                alert('Error submitting data. Please try again.');
+                            }
+                        });
+                    }
+                        return false;
+                    });
+                });
+  </script>
+
+</body>
+
+</html>
